@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     isDone: DataTypes.BOOLEAN
   }, {});
   Item.associate = function(models) {
-    // associations can be defined here
+    Item.belongsTo(models.User)
   };
   return Item;
 };
